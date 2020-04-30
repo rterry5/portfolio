@@ -102,57 +102,84 @@
   /* line 91, ../sass/style.scss */
   .navbar__link-container {
     flex-flow: column;
+    padding: 0;
+    text-align: center;
   }
 }
-/* line 98, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .navbar__link-container li {
   margin: 0 1em;
 }
 /* line 102, ../sass/style.scss */
+.navbar__link-container li:hover {
+  transition: ease-in-out 0.3s;
+  transform: scale(1.2);
+}
+/* line 108, ../sass/style.scss */
 .navbar__link {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--dark-gray);
-  font-size: 0.8em;
+  font-size: 0.85em;
 }
-/* line 109, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .navbar__logo {
   margin-left: 2em;
 }
 @media only screen and (max-width: 808px) {
-  /* line 109, ../sass/style.scss */
+  /* line 115, ../sass/style.scss */
   .navbar__logo {
     margin: 0;
   }
 }
-/* line 115, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
+.navbar .logo {
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
+}
+@media only screen and (max-width: 808px) {
+  /* line 121, ../sass/style.scss */
+  .navbar .logo {
+    height: 3em;
+  }
+}
+/* line 130, ../sass/style.scss */
 .navbar__social {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin-right: 2em;
 }
-/* line 120, ../sass/style.scss */
+@media only screen and (max-width: 808px) {
+  /* line 130, ../sass/style.scss */
+  .navbar__social {
+    padding: 0;
+    text-align: center;
+  }
+}
+/* line 139, ../sass/style.scss */
 .navbar__social li {
   margin-left: 1.5em;
 }
 
-/* line 126, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 ion-icon {
   display: block;
   font-size: 24px;
   color: var(--dark);
 }
-/* line 130, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 ion-icon.icon-link:hover {
   transition: ease-in-out 0.3s;
   transform: scale(1.5);
 }
 
-/* line 138, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 .header {
-  background-image: url("/images/computer.jpg");
+  background-image: url("/images/mug-camera-computer.jpg");
   min-height: 80vh;
   background-attachment: fixed;
   background-position: center;
@@ -162,119 +189,123 @@ ion-icon.icon-link:hover {
   display: flex;
 }
 @media only screen and (max-width: 808px) {
-  /* line 138, ../sass/style.scss */
+  /* line 157, ../sass/style.scss */
   .header {
     min-height: 40vh;
   }
 }
-/* line 150, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .header__container {
   width: 100%;
 }
-/* line 153, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 .header .button {
   box-sizing: content-box;
   cursor: pointer;
   margin: 0 auto;
-  border: 2px solid var(--aqua-blue);
+  border: 2px solid var(--medium-blue);
   border-radius: 40px;
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   height: 3em;
   width: 225px;
-  color: var(--aqua-blue);
+  color: var(--medium-blue);
   text-align: center;
   text-overflow: clip;
   letter-spacing: 1px;
   background: transparent;
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
-/* line 173, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .header .button:active {
-  border: 2px solid var(--aqua-blue);
-  background: var(--aqua-blue);
+  border: 2px solid var(--medium-blue);
+  background: var(--medium-blue);
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
   transition: none;
 }
-/* line 181, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 .header .button:hover {
   color: white;
-  background: #1ecd97;
+  background: var(--medium-blue);
+}
+/* line 205, ../sass/style.scss */
+.header__content {
+  font-size: 1.25em;
 }
 
-/* line 191, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .main__container {
   display: flex;
 }
-/* line 194, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 .main__column {
   flex-basis: 50%;
 }
 @media only screen and (max-width: 808px) {
-  /* line 194, ../sass/style.scss */
+  /* line 216, ../sass/style.scss */
   .main__column {
     flex-basis: auto;
   }
 }
 
-/* line 202, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 .section {
   display: flex;
   padding: 5em 0;
   margin: auto;
 }
 
-/* line 208, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .container {
   max-width: 1140px;
   margin: auto;
   flex-wrap: wrap;
 }
 
-/* line 214, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .column {
   padding: 0 2em;
 }
 
-/* line 218, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 .row-column {
   display: flex;
   justify-content: space-between;
 }
 @media only screen and (max-width: 808px) {
-  /* line 218, ../sass/style.scss */
+  /* line 240, ../sass/style.scss */
   .row-column {
     flex-wrap: wrap;
   }
 }
 
-/* line 226, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .skill-icons {
   display: flex;
   width: 35%;
   margin-right: auto;
   justify-content: space-between;
 }
-/* line 231, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .skill-icons ion-icon {
   color: var(--medium-blue);
   font-size: 2em;
 }
 
-/* line 239, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 .interests {
   background-color: var(--dark);
   display: flex;
   box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.11), 0 0px 2px rgba(0, 0, 0, 0.11), 0 0px 4px rgba(0, 0, 0, 0.11), 0 0px 8px rgba(0, 0, 0, 0.11), 0 0px 16px rgba(0, 0, 0, 0.11), 0 0px 32px rgba(0, 0, 0, 0.11);
 }
-/* line 245, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .interests ion-icon {
   font-size: 2.5em;
 }
-/* line 248, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 .interests__column {
   width: 100%;
   width: -moz-available;
@@ -282,20 +313,25 @@ ion-icon.icon-link:hover {
   width: fill-available;
 }
 
-/* line 258, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .footer {
   padding: 5em 0;
 }
-/* line 260, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 .footer li {
   list-style: none;
 }
-/* line 264, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
+.footer a {
+  text-decoration: none;
+  color: var(--medium-blue);
+}
+/* line 290, ../sass/style.scss */
 .footer ion-icon:hover {
   transition: ease-in-out 0.3s;
   transform: scale(1.5);
 }
-/* line 269, ../sass/style.scss */
+/* line 295, ../sass/style.scss */
 .footer .social-icons {
   padding: 0;
   display: flex;
@@ -303,11 +339,12 @@ ion-icon.icon-link:hover {
   width: 8em;
 }
 
-/* line 277, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .copyright {
   display: flex;
   background-color: var(--dark-gray);
   height: 4em;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.11), 0 0px 2px rgba(0, 0, 0, 0.11), 0 0px 4px rgba(0, 0, 0, 0.11), 0 0px 8px rgba(0, 0, 0, 0.11), 0 0px 16px rgba(0, 0, 0, 0.11), 0 0px 32px rgba(0, 0, 0, 0.11);
 }
